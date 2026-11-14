@@ -1,0 +1,54 @@
+{
+  "generated_on": "2026-11-06",
+  "provider": "built-in image_gen.imagegen",
+  "mode": "brand-new illustration; one request per portrait; no reference photographs",
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "shared_prompt": "Use case: stylized-concept. Asset type: finished illustrated portrait for a comedic dispatch-management game. Single character waist-up portrait, vertical 3:4 composition, tight generous framing with head and hands clearly visible. A polished bold American independent superhero comic look, thick crisp black ink contours, geometric chunky shadow shapes, coarse halftone dots, restrained flat screenprint colors, warm pale cream background, gritty but clean, exaggerated expressive acting, charming absurd workplace comedy. Consistent professional character art. No text, letters, watermarks, logos, border, panels or UI. Not realistic, not Japanese anime, not 3D, not an icon.",
+  "characters": [
+    {
+      "file": "artwork/tim.png",
+      "ui_name": "缇姆",
+      "subject_prompt": "Fictional satirical persona of Tim, Chinese camera-nerd creator. Young Chinese man with fluffy swept dark hair, round dark-rim glasses, bright delighted slightly manic eyes and excited grin. Tan field jacket, camera harness and cyan tee. Holding a large cinema camera with oversized lens at chest level. Cyan accent light. His attention is completely captured by the camera. Readable game portrait silhouette."
+    },
+    {
+      "file": "artwork/wang.png",
+      "ui_name": "王字如",
+      "subject_prompt": "Fictional satirical persona of Wang Ziru, Chinese tech evaluator. Neat side-parted dark hair, angular rectangular black glasses, long angular face, smug raised eyebrow and tiny knowing smirk. Black evaluator jacket and olive-lime tee, holding a tablet/report and making a tiny precise pinch gesture. Confident technical critic, face distinct from young student."
+    },
+    {
+      "file": "artwork/luo.png",
+      "ui_name": "罗咏皓",
+      "subject_prompt": "Fictional satirical persona of Luo Yonghao, middle-aged stocky Chinese tech entrepreneur. Rounded square face, short cropped dark hair, rectangular black glasses, short dark stubble, dark T-shirt under open charcoal overshirt, serious skeptical expression. One hand makes insistent lecturing finger-point gesture beside face; other arm folded. Coral-salmon screenprint accent. Friendly bulky silhouette."
+    },
+    {
+      "file": "artwork/dong.png",
+      "ui_name": "董语晖",
+      "subject_prompt": "Fictional satirical persona of Dong Yuhui, Chinese bookish livestream salesman. Young-to-middle-aged Chinese man, short neat black hair, broad square face, no glasses, earnest dreamy expression, white collared shirt with rolled-up sleeves. Carrying battered open book and small cloth rice sack. Warm burnt-orange accent. Poetic intellectual trying to do manual labor."
+    },
+    {
+      "file": "artwork/he.png",
+      "ui_name": "何彤学",
+      "subject_prompt": "Fictional satirical persona of He Tongxue, slim young Chinese tech creator, simple thin rectangular glasses, soft tousled dark hair, curious concentrated expression. White technical lab-style jacket over black tee, holding half-built electronic gadget with visible circuit board. Powder blue accent. Lean long neck and youthful silhouette, clever-idea pose."
+    },
+    {
+      "file": "artwork/da.png",
+      "ui_name": "大思码",
+      "subject_prompt": "Fictional satirical persona of Da Sima, slim middle-aged Chinese gaming commentator, close short dark hair, high forehead, thin rectangular glasses and mischievous toothy smile. Olive green zip sports jacket with cream trim. Leaning back casually, one hand raised palm out in 'wait, don't rush' gesture, other holding generic game controller. Olive and warm yellow accents."
+    },
+    {
+      "file": "artwork/geng.png",
+      "ui_name": "首工耿",
+      "subject_prompt": "Fictional satirical persona of Shougong Geng, robust Chinese workshop craftsman. Wide jaw, close-cropped black hair, dark moustache and stubble, confident deadpan expression. Dusty pale beige overalls over dark tee, bulky leather gloves, strong forearms. Holding absurd homemade multitool with wrench, gears, coiled hoses and tiny fan, not a weapon. Safety yellow accent."
+    },
+    {
+      "file": "artwork/li.png",
+      "ui_name": "李加棋",
+      "subject_prompt": "Fictional satirical persona of Li Jiaqi, fashionable slim Chinese male beauty livestream host. Smooth slender expressive face, slick side-swept dark hair with high quiff, no glasses, theatrical confident sales-pitch smile. Charcoal suit over cream T-shirt with coral cuff. One graceful hand raised dramatically, other holding small red lipstick tube. Hot coral and crimson accents."
+    }
+  ],
+  "qa": "All eight images visually inspected at generation output. Consistent cream backgrounds, black ink outlines and halftone texture; individual props and silhouettes are distinct. No text/logos/watermarks found. Tim/He share youthful glasses but use clearly different costume and camera/electronics props. Each image copied unchanged into project assets; no image manipulation was performed.",
+  "additional_scene_assets": "artwork/scene-generation-prompts.json"
+}

@@ -1,0 +1,63 @@
+{
+  "provider": "built-in image_gen.imagegen",
+  "mode": "reference-image expression edits",
+  "assets": [
+    {
+      "name": "tim-excited",
+      "ref": "tim.webp",
+      "brief": "Same young camera operator is dazzled by a beautiful shaft of light and briefly forgets his task: widened sparkling eyes, eyebrows lifted high, an involuntary delighted open-mouthed grin, a quick excited inhale as if blurting out an amazed remark. He still grips exactly the same camera, camera harness and jacket. Intensify the readable emotional beat while keeping his face recognizable and composition nearly identical.",
+      "prompt": "Use case: identity-preserve comic portrait expression edit. Edit the supplied exact illustrated character, not a new character design. Preserve identity, facial structure, hairstyle, glasses, outfit, body proportions, original cream colored background, black ink and coarse halftone print texture, palette, lighting, camera angle and framing. Keep portrait 3:4 like the source. No text, new props, logos, borders, speech bubbles, photorealism or 3D. Only make the small expression and acting adjustments specified below. Do not exaggerate age or bodily features.\nActing change: Same young camera operator is dazzled by a beautiful shaft of light and briefly forgets his task: widened sparkling eyes, eyebrows lifted high, an involuntary delighted open-mouthed grin, a quick excited inhale as if blurting out an amazed remark. He still grips exactly the same camera, camera harness and jacket. Intensify the readable emotional beat while keeping his face recognizable and composition nearly identical.",
+      "file": "tim-excited.png",
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "qa": "Identity, outfit, cream background, props and framing retained; intended emotional beat readable.",
+      "artwork_path": "artwork/tim-excited.png",
+      "asset_path": "dist/assets/tim-excited.png"
+    },
+    {
+      "name": "tim-focused",
+      "ref": "tim.webp",
+      "brief": "Same young camera operator has abruptly remembered that people need help: grin disappears, brows focus with urgent concentration, eyes lift toward the actual situation, lips slightly parted while drawing breath before responding seriously. Lower the same camera only a little in his hands so his face feels more present; preserve its shape, jacket and all other framing. This should read as a clear acting switch from giddy excitement to grounded urgency, not anger.",
+      "prompt": "Use case: identity-preserve comic portrait expression edit. Edit the supplied exact illustrated character, not a new character design. Preserve identity, facial structure, hairstyle, glasses, outfit, body proportions, original cream colored background, black ink and coarse halftone print texture, palette, lighting, camera angle and framing. Keep portrait 3:4 like the source. No text, new props, logos, borders, speech bubbles, photorealism or 3D. Only make the small expression and acting adjustments specified below. Do not exaggerate age or bodily features.\nActing change: Same young camera operator has abruptly remembered that people need help: grin disappears, brows focus with urgent concentration, eyes lift toward the actual situation, lips slightly parted while drawing breath before responding seriously. Lower the same camera only a little in his hands so his face feels more present; preserve its shape, jacket and all other framing. This should read as a clear acting switch from giddy excitement to grounded urgency, not anger.",
+      "file": "tim-focused.png",
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "qa": "Identity, outfit, cream background, props and framing retained; intended emotional beat readable.",
+      "artwork_path": "artwork/tim-focused.png",
+      "asset_path": "dist/assets/tim-focused.png"
+    },
+    {
+      "name": "da-nervous",
+      "ref": "da.webp",
+      "brief": "Same middle-aged gaming commentator has just been hurried by a teammate: smile tightens, eyebrows raise unevenly, eyes show a brief worried glance, lips open halfway into a rushed explanation. Add only two or three tiny comic sweat beads near his temple. Keep the same olive sports jacket, thin glasses, hand-held game controller, chair, raised open palm and original composition; nervous acting only, not grotesque or humiliating physical caricature.",
+      "prompt": "Use case: identity-preserve comic portrait expression edit. Edit the supplied exact illustrated character, not a new character design. Preserve identity, facial structure, hairstyle, glasses, outfit, body proportions, original cream colored background, black ink and coarse halftone print texture, palette, lighting, camera angle and framing. Keep portrait 3:4 like the source. No text, new props, logos, borders, speech bubbles, photorealism or 3D. Only make the small expression and acting adjustments specified below. Do not exaggerate age or bodily features.\nActing change: Same middle-aged gaming commentator has just been hurried by a teammate: smile tightens, eyebrows raise unevenly, eyes show a brief worried glance, lips open halfway into a rushed explanation. Add only two or three tiny comic sweat beads near his temple. Keep the same olive sports jacket, thin glasses, hand-held game controller, chair, raised open palm and original composition; nervous acting only, not grotesque or humiliating physical caricature.",
+      "file": "da-nervous.png",
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "qa": "Identity, outfit, cream background, props and framing retained; intended emotional beat readable.",
+      "artwork_path": "artwork/da-nervous.png",
+      "asset_path": "dist/assets/da-nervous.png"
+    },
+    {
+      "name": "da-defensive",
+      "ref": "da.webp",
+      "brief": "Same middle-aged gaming commentator now forces himself to look calm and insists everyone should wait: slight tight confident smile, chin a touch higher, raised open palm firmly signaling wait, eyes looking sideways with a faint trace of uncertainty while his mouth looks assured as he speaks. Keep his existing hand controller, jacket, chair, facial proportions and all props unchanged. The comedy comes from trying to sound collected despite nervous eyes, not from bodily distortion.",
+      "prompt": "Use case: identity-preserve comic portrait expression edit. Edit the supplied exact illustrated character, not a new character design. Preserve identity, facial structure, hairstyle, glasses, outfit, body proportions, original cream colored background, black ink and coarse halftone print texture, palette, lighting, camera angle and framing. Keep portrait 3:4 like the source. No text, new props, logos, borders, speech bubbles, photorealism or 3D. Only make the small expression and acting adjustments specified below. Do not exaggerate age or bodily features.\nActing change: Same middle-aged gaming commentator now forces himself to look calm and insists everyone should wait: slight tight confident smile, chin a touch higher, raised open palm firmly signaling wait, eyes looking sideways with a faint trace of uncertainty while his mouth looks assured as he speaks. Keep his existing hand controller, jacket, chair, facial proportions and all props unchanged. The comedy comes from trying to sound collected despite nervous eyes, not from bodily distortion.",
+      "file": "da-defensive.png",
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "qa": "Identity, outfit, cream background, props and framing retained; intended emotional beat readable.",
+      "artwork_path": "artwork/da-defensive.png",
+      "asset_path": "dist/assets/da-defensive.png"
+    }
+  ],
+  "status": "all four visually inspected and approved"
+}

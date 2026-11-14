@@ -1,0 +1,60 @@
+import {CHARS as BASE} from './legacy.mjs';
+export const VERSION=2;
+export const STAT_NAMES={force:'力气',tech:'技术',talk:'口才',obs:'观察'};
+const ABILITIES={
+ he:{name:'开源加速',cost:1,cooldown:3,target:'active',text:'推进自己参与的任务2格，消耗1工具包。',tag:'赶工'},
+ geng:{name:'临时发明',cost:1,cooldown:4,target:'waiting',text:'为所选任务加装原型机；自己参与时力气+3、技术+1，损失+1。消耗1工具。',tag:'改装'},
+ luo:{name:'售后兜底',cost:2,cooldown:5,target:'failed',text:'花2预算重新接回一张失败或撤单的任务，争取4拍。每单仅一次，已造成的损失保留。',tag:'补救'},
+ dong:{name:'故乡的风',cost:1,cooldown:4,target:'waiting',text:'稳住一个人群任务，期限延长3拍，城市压力-5。',tag:'控场'},
+ li:{name:'砍到骨折',cost:1,cooldown:4,target:'waiting',text:'为一个任务议价：费用-2，工具需求-1。每单仅一次。',tag:'采购'},
+ tim:{name:'全城开机',cost:1,cooldown:3,target:'waiting',text:'查清所选任务的隐藏要求，并提供观察+3的现场情报。',tag:'侦察'},
+ da:{name:'这波不算',cost:2,cooldown:99,target:'global',text:'回退最近1拍，撤回该拍全部结果。本关一次；消耗的指挥点不会退。',tag:'回溯'},
+ wang:{name:'独立复核',cost:2,cooldown:5,target:'global',text:'预览接下来3拍的事件，并挡住下一次恶化或扣款。',tag:'反制'}
+};
+const PASSIVES={he:'设备任务技术+1。',geng:'放飞路线力气+2、技术+1，设备损失+1。',luo:'处理失败时设备损失少2。',dong:'人群任务口才+2；稳妥路线多1工作拍。',li:'任务费用-1；人群任务口才+1。',tim:'设备任务观察+2。',da:'稳妥路线观察+2，但多1工作拍。',wang:'验收任务观察+2；与罗咏皓搭档技术+2，但先吵1工作拍。'};
+const BARK_TEXT={tim:'卧槽，这个逆光！等我先把人救了。',he:'能修。等下，教程最后五秒广告。',geng:'别靠太近，这回我真加了保险。',luo:'先干，出了问题我负责找售后。',dong:'你先别急，听我把这袋米讲完。',li:'这个价能拿下，再便宜你得等双十一。',da:'别急，我在预判，真不是卡了。',wang:'先别吵，让我看看谁的方案不严谨。'};
+export const CHARS=BASE.map(c=>({...c,ability:ABILITIES[c.id],passive:PASSIVES[c.id],audio:'bark-'+c.id,barkText:BARK_TEXT[c.id]}));
+export const UPGRADES=[
+ {id:'van',name:'二手神车',cost:2,icon:'van',text:'返程时间少1拍。车门有点响，速度是真快。'},
+ {id:'tools',name:'万能工具箱',cost:2,icon:'tool',text:'每关开局多2工具包。禁止拿去修工位。'},
+ {id:'radio',name:'不漏电的对讲机',cost:3,icon:'bolt',text:'每关开局多1指挥点，指挥点上限+1。'},
+ {id:'break',name:'带靠背的椅子',cost:2,icon:'rest',text:'队员在基地每拍多恢复1疲劳。终于能坐了。'}
+];
+const r=(name,req,work,fee=1,tools=0,damage=0,bypass=false)=>({name,req,work,fee,tools,damage,bypass});
+const j=(id,title,type,release,deadline,safe,chaos,extra={})=>({id,title,type,release,deadline,safe,chaos,pay:4,toolReward:0,critical:false,hidden:false,dependencies:[],point:[50,45],desc:'现场正在等你处理。',...extra});
+export const LEVELS=[
+ {id:0,name:'先别把局拆了',district:'实验档案 / 调度模拟',image:'intro-office',turns:10,squad:3,slots:1,budget:10,tools:3,energy:3,minComplete:2,
+  unlock:['he','geng','luo'],defaultCrew:['he','geng','luo'],mechanic:'教学 · 选人、出发、主动技能与返程',events:[],
+  story:[{image:'intro-office',audio:'brief-lab',speaker:'值班主任',text:'开班前做个实验。红点是待办，左边是你能叫得动的人。先别整节目效果，学会选人、出发、用技能，最后把活干完。'}],
+  jobs:[j('lab-door','训练电梯卡住了','lift',0,8,r('按线路检修',{tech:5},3,0,0),r('整个拆下来',{force:6},2,0,1,2),{critical:true,point:[35,37],desc:'模拟电梯里只有一个假人。先派何彤学修门，再试试主动技能。',joke:'lift'}),j('lab-crate','工具箱拒绝下班','drone',3,10,r('解开卡扣',{force:4},2,0,0),r('连箱带锁一起搬',{force:5},1,0,0,1),{critical:true,point:[70,65],desc:'第二个实验：派首工耿搬回工具箱。看看处理和返程分别要多久。',joke:'drone'})]},
+ {id:1,name:'第一单就来大的',district:'01 / 摸鱼社区',image:'chapter1',turns:14,squad:4,slots:2,budget:14,tools:3,energy:3,minComplete:3,
+  unlock:['he','geng','luo','dong'],defaultCrew:['he','geng','luo','dong'],mechanic:'双线出警 · 留住技术人员',events:[],
+  story:[{image:'chapter1',audio:'brief-1a',speaker:'旁白',text:'第一站，摸鱼社区。一部电梯不动了，一家奶茶店冒烟了。每个人都说自己最急，因为他们没看见隔壁那单。'},{image:'intro-office',audio:'brief-1b',speaker:'值班主任',text:'今晚先学会同时接两单。派出去的人还得返程。别把最后一个会修东西的，也派去领鸡蛋。'}],
+  jobs:[j('s1-lift','电梯不想上班','lift',0,5,r('修好门锁',{tech:5},2,1,1),r('轿厢打包带走',{force:7},1,2,0,3),{critical:true,point:[29,31],desc:'6个人卡在三楼。物业的“马上”已经说了两小时。',joke:'lift'}),j('s1-fire','三分糖，十分火','fire',1,7,r('断电后灭火',{tech:4,obs:3},2,1,1),r('开墙灌水',{force:6},1,2,0,3),{critical:true,point:[70,30],desc:'奶茶店后厨冒烟。店长想先把收银机抱出来。',joke:'fire'}),j('s1-eggs','免费鸡蛋限量发疯','crowd',3,10,r('登记分批发放',{talk:5},2,0,0),r('举喇叭包圆现场',{talk:7,force:2},1,1,0,1),{point:[68,70],desc:'鸡蛋只剩两盒，排队的大爷却自带了平底锅。',joke:'queue'}),j('s1-drone','外卖比你先上树','drone',6,13,r('定位遥控返航',{tech:4,obs:4},2,1,1),r('树给它摇下来',{force:6},1,1,0,2),{point:[25,70],desc:'顾客备注：孩子睡了。无人机偏偏开始练高音。',joke:'drone'})]},
+ {id:2,name:'夜市全是狠活',district:'02 / 整活广场',image:'chapter2',turns:18,squad:5,slots:2,budget:16,tools:4,energy:3,minComplete:4,
+  unlock:['he','geng','luo','dong','li'],defaultCrew:['he','geng','luo','dong','li'],mechanic:'资源取舍 · 采购、改装与人群控场',events:[{at:7,kind:'surge',text:'主办方突然催单：一项人群任务的期限缩短1拍。',amount:1}],
+  story:[{image:'chapter2',audio:'brief-2a',speaker:'旁白',text:'夜市开场，鸡蛋还没发，队伍先排到马路上。主办方说问题不大，顺手又发来三张催单截图。'},{image:'intro-team',audio:'brief-2b',speaker:'值班主任',text:'董语晖和李加棋到了。一个能把客户讲哭，一个能把供应商讲降价。工具包不多，别全花在第一单。'}],
+  jobs:[j('s2-screen','大屏开始公开处刑','screen',0,5,r('找出信号源',{tech:5,obs:3},2,1,1),r('先把总闸扬了',{force:5},1,1,0,3),{critical:true,point:[30,30],tags:['设备','验收'],desc:'全广场正在循环店长练舞。店长让你“立刻处理”。',joke:'screen'}),j('s2-queue','队伍比舞台还长','crowd',0,6,r('分流并解释规则',{talk:6},2,0,0),r('现场重订规则',{talk:8,force:2},1,1,0,1),{point:[65,29],desc:'新开的夜市入口堵成一团。有人连便携小板凳都架好了。',joke:'queue'}),j('s2-stock','卖出去了，货没了','crowd',3,10,r('查库存补货',{tech:4,talk:4},2,1,1),r('先让供应商上链接',{talk:7,force:3},1,2,0,1),{point:[74,57],desc:'直播间说现货秒发，仓库里只剩一个塑料板凳。',joke:'market'}),j('s2-cat','树上人比猫还多','drone',5,13,r('固定绳索逐个接回',{force:5,obs:3},2,1,1),r('树枝打包一起下',{force:6},1,1,0,2),{point:[25,70],desc:'救猫的困在树上，救人的也困在树上。猫在下面看热闹。',joke:'cat'}),j('s2-stage','舞台先离开地面','stage',8,17,r('加固升降结构',{tech:6,force:4},2,2,1),r('抬着舞台下班',{force:7},1,2,0,3),{critical:true,point:[62,76],desc:'歌手还在唱，舞台已经开始自由发挥。',joke:'stage'})]},
+ {id:3,name:'别急，先排水',district:'03 / 雨夜下穿道',image:'chapter3',turns:22,squad:6,slots:2,budget:18,tools:5,energy:4,minComplete:4,
+  unlock:['he','geng','luo','dong','li','tim','da'],defaultCrew:['he','geng','luo','dong','tim','da'],mechanic:'前置任务 · 情报与一次回溯',events:[{at:8,kind:'jam',duration:3,text:'雨太大，返程道路拥堵。接下来3拍派出的队伍返程多1拍。'},{at:13,kind:'surge',amount:2,text:'积水上涨，一项待办的期限缩短2拍。'}],
+  story:[{image:'chapter3',audio:'brief-3a',speaker:'旁白',text:'雨下大了。泵站没电，积水不走；桥上有人，桥还在晃。现在的难题，是先修哪个，后面的活才能动。'},{image:'intro-team',audio:'brief-3b',speaker:'值班主任',text:'缇姆和大思码接入频道。一个负责看清问题，一个负责给咱争取时间。这次真得动脑子，光嘴硬不防水。'}],
+  jobs:[j('s3-power','泵站先要有电','screen',0,6,r('检修配电线路',{tech:6,obs:4},2,1,1),r('搬来临时大电池',{tech:5,force:4},1,3,2,2),{critical:true,toolReward:2,point:[26,30],desc:'先恢复供电，泵站才能按稳妥方案排水。',joke:'power'}),j('s3-pump','水不走，单不消','fire',1,11,r('启动泵组排水',{tech:5,force:4},2,1,1),r('开个泄水口',{force:7},1,3,0,3,true),{critical:true,dependencies:['s3-power'],point:[48,61],desc:'普通方案需要先修配电站；也能开墙泄水，但维修费归你。',joke:'fire'}),j('s3-bridge','桥：我也想下班','bridge',3,13,r('支撑后疏散',{force:6,tech:4},2,1,1),r('整段桥吊上岸',{force:8},1,2,0,3),{point:[73,29],desc:'水位在涨，桥还在晃。先把人带到稳的地方。',joke:'bridge'}),j('s3-bus','公交不想游泳','crowd',5,15,r('引导乘客转移',{force:5,talk:3},2,1,0),r('连车推到高处',{force:8},1,2,1,3),{point:[70,66],desc:'司机说车还能开，乘客说自己不会游泳。',joke:'jam'}),j('s3-drone','无人机报点不全','drone',8,18,r('核实位置再返航',{tech:3,obs:6},2,1,1),r('沿灯光追踪回收',{force:4,obs:5},1,2,1,2),{hidden:true,point:[25,73],desc:'接警信息少了关键一段。用缇姆侦察，或者准备足够的观察能力。',joke:'drone'}),j('s3-shelter','避雨点临时加座','crowd',11,21,r('登记安置人员',{talk:6,obs:4},2,0,0),r('临时改出等候区',{talk:5,tech:3},1,2,1,1),{point:[47,27],desc:'雨停之前，先给大家找个能坐的地方。',joke:'queue'})]},
+ {id:4,name:'相关部门正在输入',district:'04 / 屋顶广播站',image:'chapter4',turns:26,squad:6,slots:3,budget:20,tools:5,energy:5,minComplete:5,
+  unlock:CHARS.map(c=>c.id),defaultCrew:['he','geng','luo','dong','tim','wang'],mechanic:'三线出警 · 疲劳、反制与连锁故障',events:[{at:6,kind:'blackout',duration:3,text:'规程系统切换“节能模式”：接下来3拍，新增设备任务多1工作拍。'},{at:11,kind:'drain',amount:1,text:'规程系统要求重复提交表格，指挥点-1。'},{at:15,kind:'surge',amount:2,text:'自动催单启动：一项待办期限缩短2拍。'}],
+  story:[{image:'chapter4',audio:'brief-4a',speaker:'旁白',text:'全区停电，广播却自己响了。新系统规程宣布：无法按标准处理的事件，将按标准取消。'},{image:'intro-office',audio:'brief-4b',speaker:'值班主任',text:'王字如来了，说要独立评测这个系统。行，报告晚点写。先把广播塔和备用电源抢回来，留点指挥点应付后手。'}],
+  jobs:[j('s4-relay','先接回备用线路','screen',0,6,r('恢复中继供电',{tech:6,obs:4},2,1,1),r('旁路直接顶上',{tech:5,force:4},1,3,2,2),{critical:true,toolReward:2,point:[25,30],desc:'这条线路恢复后，才能正常检修服务器。',joke:'power'}),j('s4-server','服务器只会踢皮球','screen',1,10,r('检修控制服务器',{tech:7,obs:4},3,1,1),r('把机柜拖离机房',{force:8},1,3,1,4,true),{critical:true,dependencies:['s4-relay'],point:[51,28],desc:'需要供电。主板上贴满了“请走流程”的标签。',joke:'screen'}),j('s4-report','假警报正在占线','crowd',3,12,r('交叉核验信息',{obs:6,talk:4},2,0,0),r('逐条打电话对质',{talk:7},1,1,0,1),{tags:['人群','验收'],point:[74,31],desc:'一半警报是同一台打印机重复提交的。查清楚才能省人手。',joke:'finale'}),j('s4-antenna','天线要被风吹走','stage',6,16,r('固定天线底座',{force:6,tech:5},2,1,1),r('连底座搬进室内',{force:8},1,2,0,3),{critical:true,point:[75,65],desc:'广播塔还能用，但天线正在申请自由。',joke:'stage'}),j('s4-crowd','安抚已经没电的市民','crowd',7,17,r('开设临时说明点',{talk:7,obs:4},2,0,0),r('接上喇叭现场说明',{talk:8,tech:2},1,2,0,1),{point:[50,74],desc:'手机没电，路灯没电，大家的耐心也没电了。',joke:'queue'}),j('s4-backup','备用电源不想备用','screen',10,21,r('检测电池与接口',{tech:5,obs:5},2,1,1),r('外接临时电池阵列',{tech:6,force:3},1,3,2,2),{toolReward:1,point:[24,70],desc:'广播恢复前，必须准备稳定电源。',joke:'power'}),j('s4-broadcast','把话筒抢回来','stage',12,25,r('恢复人工广播',{tech:6,talk:5},3,1,1),r('拆掉自动播报器',{force:7,obs:5},1,3,0,4),{critical:true,dependencies:['s4-server','s4-antenna','s4-backup'],point:[49,48],desc:'服务器、天线和备用电源都要先准备好。',joke:'finale'})]},
+ {id:5,name:'今晚咱们自己定规矩',district:'05 / 自动甩锅中心',image:'chapter5',turns:31,squad:6,slots:3,budget:24,tools:6,energy:5,minComplete:6,
+  unlock:CHARS.map(c=>c.id),defaultCrew:['he','geng','luo','dong','tim','wang'],mechanic:'最终考验 · 先救现场，再拆规程',events:[{at:7,kind:'surge',amount:1,text:'规程系统开始催单：一项待办期限缩短1拍。'},{at:13,kind:'drain',amount:2,text:'规程系统要求重新认证：指挥点-2。'},{at:19,kind:'blackout',duration:6,text:'中心机房锁定低功耗模式，新增设备任务多1工作拍。'},{at:25,kind:'surge',amount:2,text:'最后一轮自动催单：一项待办期限缩短2拍。'}],
+  story:[{image:'chapter5',audio:'brief-5a',speaker:'规程系统',text:'检测到异常：人类正在临时变通。正在将所有非标准救援，转交给不存在的相关部门。预计等待时间：永久。'},{image:'chapter5',audio:'brief-5b',actor:'tim',speaker:'缇姆',text:'听见没？这破打印机都成精了。先救外面的，再拆里面的。旁路、电源和控制台，一样都不能少。今晚，咱们自己定规矩。'}],
+  jobs:[j('s5-power','先保住外部供电','screen',0,7,r('手动恢复电力',{tech:6,obs:5},2,1,1),r('巨型电池先顶住',{tech:5,force:4},1,3,2,2),{critical:true,toolReward:2,point:[25,30],desc:'供电恢复前，中心冷却系统无法正常运行。',joke:'power'}),j('s5-bridge','外面的桥也得救','bridge',0,8,r('架设临时支撑',{force:7,obs:3},2,1,1),r('整段桥抢运上岸',{force:8},1,3,0,4),{point:[71,28],desc:'系统已经把这单取消了，但桥上的人还在等。',joke:'bridge'}),j('s5-hotline','接回人工热线','crowd',3,12,r('疏导与分派来电',{talk:7,obs:3},2,0,0),r('所有电话现场接',{talk:8},1,1,0,1),{point:[75,55],desc:'不要再让人听那段“您的来电非常重要”。',joke:'market'}),j('s5-cooling','冷却风扇热到摆烂','fire',4,14,r('恢复机房冷却',{tech:6,force:4},2,1,1),r('拆墙给机房通风',{force:8},1,3,0,3,true),{critical:true,dependencies:['s5-power'],point:[50,27],desc:'正常检修需要供电。破墙通风也行，但整栋楼会很有意见。',joke:'fire'}),j('s5-bypass','找到手动旁路','screen',7,18,r('核实旁路开关',{obs:7,tech:5},2,1,1),r('按实物追线拆解',{force:5,tech:5},1,3,1,3),{critical:true,hidden:true,toolReward:1,point:[25,58],desc:'说明书上缺了一页。可以侦察，也可以派足够强的观察组合。',joke:'screen'}),j('s5-evac','最后一批等候市民','crowd',10,22,r('组织人员转移',{talk:6,force:3},2,0,0),r('开出临时便民通道',{force:6,talk:4},1,2,0,2),{point:[30,77],desc:'把人先送离中心门口，再考虑怎么处理里面的机器。',joke:'jam'}),j('s5-backup','不靠系统的备用电','screen',12,25,r('安装独立备用电源',{force:5,tech:5},2,1,1),r('拼一组怪兽电池',{tech:6,force:4},1,3,2,2),{critical:true,point:[68,77],desc:'最后操作必须脱离中心系统的供电控制。',joke:'power'}),j('s5-core','拆掉自动甩锅机','boss',20,30,r('切换人工控制',{tech:7,talk:5},4,2,2),r('连规程带机柜扬了',{force:7,obs:5},2,4,1,5),{critical:true,dependencies:['s5-cooling','s5-bypass','s5-backup'],point:[51,49],pay:8,desc:'冷却、旁路、独立电源缺一不可。干完这单，今晚才算真正结束。',joke:'finale'})]}
+];
+LEVELS.forEach(l=>l.jobs.forEach(q=>{q.tags??=(['crowd'].includes(q.type)?['人群']:['设备']);}));
+export const OPENING=[
+ {image:'intro-city',audio:'intro-city',speaker:'旁白',text:'抽象区，晚上八点。电梯想罢工，水管想出道，连外卖都学会了上树。偏偏今晚，正经救援队全去团建了。'},
+ {image:'intro-office',audio:'intro-office',speaker:'值班主任',text:'上面给咱一晚上。五个片区，五张考核单。天亮之前干不完，这个局就改共享自习室。椅子还得自己搬。'},
+ {image:'intro-team',audio:'intro-team',speaker:'值班主任',text:'专业的人没来，来的是这八位。别问靠不靠谱，问就是各有绝活。戴上耳机。第一通电话，已经开始骂了。'}
+];
+export const ENDING=[
+ {image:'ending-city',audio:'ending-good',speaker:'旁白',text:'天亮了。局保住了，玻璃没保住，停车场还多了一部电梯。市民送来一面锦旗，上面写着：人很好，下次轻点。'},
+ {image:'intro-office',audio:'ending-team',speaker:'值班主任',text:'全员点名。人齐了就下班。至于设备损失，财务说先不算。因为计算器，也让咱给拆了。'}
+];

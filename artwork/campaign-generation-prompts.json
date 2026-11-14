@@ -1,0 +1,121 @@
+{
+  "provider": "built-in image_gen.imagegen",
+  "style": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.",
+  "panels": [
+    {
+      "name": "intro-city",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Rainy contemporary Chinese city at night from a broad rooftop view, wet apartment towers, dense absurd traffic gridlock, tiny emergency van squeezed between buses and electric scooters, coral emergency lights reflecting in puddles, clotheslines and air conditioners, dark teal skyline. The city's everyday chaos is comic, not tragic. Strong layers of roofs foreground, traffic midground, skyline distance. Leave left upper third a calmer teal sky for title overlay.",
+      "file": "intro-city.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/intro-city.png",
+      "asset_path": "dist/assets/intro-city.png"
+    },
+    {
+      "name": "intro-office",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Interior of a shabby Chinese emergency dispatch office at night, dramatic wide-angle perspective, wall monitors displaying abstract city-map shapes without readable text, a bright red rotary hotline phone in foreground, instant noodle cup and tangled cables, broken office chair leaning crookedly, flickering fluorescent strip, peeling paint, emergency orange light through blinds. No central person, the room itself tells the joke. Richly drawn mundane office clutter, not sci-fi.",
+      "file": "intro-office.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/intro-office.png",
+      "asset_path": "dist/assets/intro-office.png"
+    },
+    {
+      "name": "intro-team",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Theatrical low-angle wide shot from inside a shabby dispatch office, eight wildly mismatched emergency-responder silhouettes arriving together through the open doorway, one enormous cinema-camera rig, toolbox and overbuilt multitool, microphone, tablet, book and rice sack, cheap jackets mixed with office shirts. Generic faces in shadow and clearly distinct silhouettes, no recognizable real person. Coral corridor backlight and teal office foreground, swaggering absurd team introduction. No text.",
+      "file": "intro-team.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/intro-team.png",
+      "asset_path": "dist/assets/intro-team.png",
+      "qa_note": "Eight foreground responders; one distant background staff silhouette."
+    },
+    {
+      "name": "chapter1",
+      "prompt": "undefined\nScene: Night food street in a Chinese residential neighborhood, steaming food stalls and colorful blank awnings, malfunctioning exterior elevator on an older apartment building, several ordinary residents standing safely on the pavement below, a little kitchen smoke from a noodle stall, a responder van blocked by stacked plastic stools. Teal blue night sky, warm orange stalls, strong comic depth and clutter, minor everyday chaos without anyone in danger or injured.",
+      "file": "chapter1.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "artwork_path": "artwork/chapter1.png",
+      "asset_path": "dist/assets/chapter1.png",
+      "qa_note": "1536x1024 landscape; use cover layout if a 16:9 frame is needed, focal objects remain centered."
+    },
+    {
+      "name": "chapter2",
+      "prompt": "undefined\nScene: Neon Chinese shopping plaza preparing for an absurd night festival, crowded orderly-ish queues, tangled blank promotional banners with no letters, overloaded temporary stage with oversized speakers and mismatched decorative props leaning awkwardly, a tiny harried stage crew safely on the ground, shopping carts and cheap folding chairs, coral and teal lighting. Grand panoramic comic composition, lively and funny not tragic.",
+      "file": "chapter2.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1752,
+        897
+      ],
+      "artwork_path": "artwork/chapter2.png",
+      "asset_path": "dist/assets/chapter2.png"
+    },
+    {
+      "name": "chapter3",
+      "prompt": "undefined\nScene: Rainstorm at a flooded Chinese city underpass, shallow rising street water around stalled but safe cars, utility box with small contained sparks, an improvised temporary bridge made from mundane repair materials, a small delivery drone hovering, ordinary people waiting safely on elevated pavement under umbrellas. Teal storm, coral emergency van beacons, graphic rain and rippling reflections, cinematic urban comic without injuries or horror.",
+      "file": "chapter3-clean.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/chapter3-clean.png",
+      "asset_path": "dist/assets/chapter3-clean.png",
+      "draft_file": "chapter3.png",
+      "draft_original": "[local path omitted]",
+      "edit_prompt": "Edit this exact comic panel. Keep the composition, objects, people, vehicles, rain, lighting, thick ink linework and halftone colors unchanged. Remove ALL readable writing, letters, words and numerals everywhere in the image. Specifically turn the top-left pink weather billboard into a blank coral panel with only the white rain-cloud pictogram; turn the blue underpass name sign into a blank dark blue rectangle with only a white downward arrow; remove the 3.8m numerals and leave a simple circular pictogram; turn the red LED warning sign into a blank red-glow display with only a warning triangle; remove all Chinese writing on the red van, grey utility box and yellow barrier sign; leave the red lightning bolt and simple warning pictograms only. Blank out all license plate characters and drone parcel text. No words or numbers may remain. This is a text-removal edit, not a redesign. Preserve image dimensions and illustrated quality.",
+      "qa_note": "Text removed with built-in imagegen; use selected clean variant, not chapter3.png draft."
+    },
+    {
+      "name": "chapter4",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Wide wind-swept rooftop broadcast station at night, enormous satellite dish antennas and lattice radio masts, most of the Chinese city below in blackout with scattered red emergency lights, loose paperwork blowing around rooftop equipment, two small camera drones orbiting an antenna, safe narrow maintenance walkways, teal sky and coral warning beacons. Ominous but witty mundane equipment overload, no people in peril. Clearly a rooftop, not a spaceship.",
+      "file": "chapter4.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/chapter4.png",
+      "asset_path": "dist/assets/chapter4.png"
+    },
+    {
+      "name": "chapter5",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Final-boss visual in a Chinese municipal-style dispatch control center transformed into a ridiculous giant machine built from office printers, tangled cables, multiple mismatched monitors, rubber stamps, paper trays, staplers and rolling office chairs. A huge ominous humanoid silhouette assembled from these office objects towers in the center; its blocky printer head and many dangling stamp arms look absurd rather than violent. Surrounding city-map monitor shapes, teal shadows and coral glow, low-angle heroic comic framing. No weapons, no branded technology, no text.",
+      "file": "chapter5.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/chapter5.png",
+      "asset_path": "dist/assets/chapter5.png"
+    },
+    {
+      "name": "ending-city",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed 16:9 cinematic motion-comic background panel for a playable irreverent Chinese urban dispatch game. Style: professional bold American independent comic illustration, thick black ink outlines, chunky graphic shadows, coarse halftone dots, faded warm cream paper grain, restrained teal night colors and coral emergency highlights, energetic depth, cinematic composition, absurd workplace comedy. Consistent with a cream-paper comic print world. Wide landscape, no frame. Bottom 20 percent fairly uncluttered for in-game captions; no text, letters, numbers, signage words, brand logos, watermark. Generic small people only, faces not central. No injury, no disaster tragedy, no photorealism, no 3D, no SVG/icon appearance.\nScene: Dawn over the same lived-in Chinese city after a long chaotic night, wide rooftop-street perspective, repair crew silhouettes clearing modest debris and patching a shop wall, battered small emergency-dispatch van parked at curb, ordinary neighbors carrying breakfast bags, warm sunlight lifting above high-rise rooftops, a repaired quiet road and a faint rainbow in wet pavement. Hopeful and irreverent comic aftermath, warm cream/orange sunrise balancing residual teal shadows, no tragedy, no injury, no readable text.",
+      "file": "ending-city.png",
+      "status": "visual QA approved",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "artwork_path": "artwork/ending-city.png",
+      "asset_path": "dist/assets/ending-city.png"
+    }
+  ],
+  "status": "all nine selected panels visually inspected and ready"
+}

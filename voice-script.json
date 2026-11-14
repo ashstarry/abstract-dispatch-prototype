@@ -1,0 +1,157 @@
+{
+  "provider": "ElevenLabs",
+  "language": "zh",
+  "no_voice_cloning": true,
+  "clips": [
+    {
+      "id": "intro-city",
+      "file": "intro-city.mp3",
+      "speaker": "narrator",
+      "text": "抽象区，晚上八点。电梯想罢工，水管想出道，连外卖都学会了上树。偏偏今晚，正经救援队全去团建了。"
+    },
+    {
+      "id": "intro-office",
+      "file": "intro-office.mp3",
+      "speaker": "dispatch",
+      "text": "上面给咱一晚上。五个片区，五张考核单。天亮之前干不完，这个局就改共享自习室。椅子还得自己搬。"
+    },
+    {
+      "id": "intro-team",
+      "file": "intro-team.mp3",
+      "speaker": "dispatch",
+      "text": "专业的人没来，来的是这八位。别问靠不靠谱，问就是各有绝活。戴上耳机。第一通电话，已经开始骂了。"
+    },
+    {
+      "id": "brief-lab",
+      "file": "brief-lab.mp3",
+      "speaker": "dispatch",
+      "text": "开班前做个实验。红点是待办，左边是你能叫得动的人。先别整节目效果，学会选人、出发、用技能，最后把活干完。"
+    },
+    {
+      "id": "brief-1a",
+      "file": "brief-1a.mp3",
+      "speaker": "narrator",
+      "text": "第一站，摸鱼社区。一部电梯不动了，一家奶茶店冒烟了。每个人都说自己最急，因为他们没看见隔壁那单。"
+    },
+    {
+      "id": "brief-1b",
+      "file": "brief-1b.mp3",
+      "speaker": "dispatch",
+      "text": "今晚先学会同时接两单。派出去的人还得返程。别把最后一个会修东西的，也派去领鸡蛋。"
+    },
+    {
+      "id": "brief-2a",
+      "file": "brief-2a.mp3",
+      "speaker": "narrator",
+      "text": "夜市开场，鸡蛋还没发，队伍先排到马路上。主办方说问题不大，顺手又发来三张催单截图。"
+    },
+    {
+      "id": "brief-2b",
+      "file": "brief-2b.mp3",
+      "speaker": "dispatch",
+      "text": "董语晖和李加棋到了。一个能把客户讲哭，一个能把供应商讲降价。工具包不多，别全花在第一单。"
+    },
+    {
+      "id": "brief-3a",
+      "file": "brief-3a.mp3",
+      "speaker": "narrator",
+      "text": "雨下大了。泵站没电，积水不走；桥上有人，桥还在晃。现在的难题，是先修哪个，后面的活才能动。"
+    },
+    {
+      "id": "brief-3b",
+      "file": "brief-3b.mp3",
+      "speaker": "dispatch",
+      "text": "缇姆和大思码接入频道。一个负责看清问题，一个负责给咱争取时间。这次真得动脑子，光嘴硬不防水。"
+    },
+    {
+      "id": "brief-4a",
+      "file": "brief-4a.mp3",
+      "speaker": "narrator",
+      "text": "全区停电，广播却自己响了。新系统规程宣布：无法按标准处理的事件，将按标准取消。"
+    },
+    {
+      "id": "brief-4b",
+      "file": "brief-4b.mp3",
+      "speaker": "dispatch",
+      "text": "王字如来了，说要独立评测这个系统。行，报告晚点写。先把广播塔和备用电源抢回来，留点指挥点应付后手。"
+    },
+    {
+      "id": "brief-5a",
+      "file": "brief-5a.mp3",
+      "speaker": "system",
+      "text": "检测到异常：人类正在临时变通。正在将所有非标准救援，转交给不存在的相关部门。预计等待时间：永久。"
+    },
+    {
+      "id": "brief-5b",
+      "file": "brief-5b.mp3",
+      "speaker": "tim",
+      "text": "听见没？这破打印机都成精了。先救外面的，再拆里面的。旁路、电源和控制台，一样都不能少。今晚，咱们自己定规矩。"
+    },
+    {
+      "id": "ending-good",
+      "file": "ending-good.mp3",
+      "speaker": "narrator",
+      "text": "天亮了。局保住了，玻璃没保住，停车场还多了一部电梯。市民送来一面锦旗，上面写着：人很好，下次轻点。"
+    },
+    {
+      "id": "ending-team",
+      "file": "ending-team.mp3",
+      "speaker": "dispatch",
+      "text": "全员点名。人齐了就下班。至于设备损失，财务说先不算。因为计算器，也让咱给拆了。"
+    },
+    {
+      "id": "debrief-fail",
+      "file": "debrief-fail.mp3",
+      "speaker": "dispatch",
+      "text": "这班还没过。别急着卸载，先看看哪单耽误了，谁被你派远了。锅捡回来，咱们重新排一次。"
+    },
+    {
+      "id": "bark-he",
+      "file": "bark-he.mp3",
+      "speaker": "he",
+      "text": "能修。等下，教程最后五秒广告。"
+    },
+    {
+      "id": "bark-geng",
+      "file": "bark-geng.mp3",
+      "speaker": "geng",
+      "text": "别靠太近，这回我真加了保险。"
+    },
+    {
+      "id": "bark-luo",
+      "file": "bark-luo.mp3",
+      "speaker": "luo",
+      "text": "先干，出了问题我负责找售后。"
+    },
+    {
+      "id": "bark-dong",
+      "file": "bark-dong.mp3",
+      "speaker": "dong",
+      "text": "你先别急，听我把这袋米讲完。"
+    },
+    {
+      "id": "bark-li",
+      "file": "bark-li.mp3",
+      "speaker": "li",
+      "text": "这个价能拿下。再便宜你得等双十一。"
+    },
+    {
+      "id": "bark-tim",
+      "file": "bark-tim.mp3",
+      "speaker": "tim",
+      "text": "卧槽，这个逆光！等我先把人救了。"
+    },
+    {
+      "id": "bark-da",
+      "file": "bark-da.mp3",
+      "speaker": "da",
+      "text": "别急，我在预判。真不是卡了。"
+    },
+    {
+      "id": "bark-wang",
+      "file": "bark-wang.mp3",
+      "speaker": "wang",
+      "text": "先别吵，让我看看谁的方案不严谨。"
+    }
+  ]
+}

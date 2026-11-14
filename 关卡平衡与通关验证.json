@@ -1,0 +1,1056 @@
+{
+  "generated": "2026-11-13",
+  "method": "Deterministic seeded legal-action simulation; actual engine; default duty; standard; no permanent upgrades; tools bought at in-game prices; optional He acceleration",
+  "levels": [
+    {
+      "level": 0,
+      "passed": true,
+      "all": true,
+      "completed": 2,
+      "total": 2,
+      "turn": 4,
+      "damage": 0,
+      "budget": 18,
+      "panic": 0,
+      "seed": 1,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "lab-door",
+          "crew": [
+            "he"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "skill",
+          "actor": "he",
+          "target": "lab-door"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "dispatch",
+          "job": "lab-crate",
+          "crew": [
+            "he",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "skill",
+          "actor": "he",
+          "target": "lab-crate"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "lab-door",
+          "status": "done",
+          "deadline": 8
+        },
+        {
+          "id": "lab-crate",
+          "status": "done",
+          "deadline": 10
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "passed": true,
+      "all": true,
+      "completed": 4,
+      "total": 4,
+      "turn": 8,
+      "damage": 3,
+      "budget": 24,
+      "panic": 0,
+      "seed": 1,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s1-lift",
+          "crew": [
+            "geng",
+            "dong"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "dispatch",
+          "job": "s1-fire",
+          "crew": [
+            "he"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 2,
+          "action": "skill",
+          "actor": "he",
+          "target": "s1-fire"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "dispatch",
+          "job": "s1-eggs",
+          "crew": [
+            "he",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 5,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "dispatch",
+          "job": "s1-drone",
+          "crew": [
+            "geng"
+          ],
+          "mode": "chaos"
+        },
+        {
+          "turn": 7,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "tick"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "s1-lift",
+          "status": "done",
+          "deadline": 5
+        },
+        {
+          "id": "s1-fire",
+          "status": "done",
+          "deadline": 7
+        },
+        {
+          "id": "s1-eggs",
+          "status": "done",
+          "deadline": 10
+        },
+        {
+          "id": "s1-drone",
+          "status": "done",
+          "deadline": 13
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "passed": true,
+      "all": true,
+      "completed": 5,
+      "total": 5,
+      "turn": 12,
+      "damage": 0,
+      "budget": 25,
+      "panic": 0,
+      "seed": 1,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s2-screen",
+          "crew": [
+            "he",
+            "geng"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s2-queue",
+          "crew": [
+            "li"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "skill",
+          "actor": "he",
+          "target": "s2-screen"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "dispatch",
+          "job": "s2-stock",
+          "crew": [
+            "he",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "skill",
+          "actor": "he",
+          "target": "s2-stock"
+        },
+        {
+          "turn": 5,
+          "action": "tick"
+        },
+        {
+          "turn": 5,
+          "action": "buyTools"
+        },
+        {
+          "turn": 5,
+          "action": "dispatch",
+          "job": "s2-cat",
+          "crew": [
+            "he",
+            "geng"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 6,
+          "action": "tick"
+        },
+        {
+          "turn": 7,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "tick"
+        },
+        {
+          "turn": 9,
+          "action": "tick"
+        },
+        {
+          "turn": 9,
+          "action": "buyTools"
+        },
+        {
+          "turn": 9,
+          "action": "dispatch",
+          "job": "s2-stage",
+          "crew": [
+            "geng",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 10,
+          "action": "tick"
+        },
+        {
+          "turn": 11,
+          "action": "tick"
+        },
+        {
+          "turn": 12,
+          "action": "tick"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "s2-screen",
+          "status": "done",
+          "deadline": 5
+        },
+        {
+          "id": "s2-queue",
+          "status": "done",
+          "deadline": 6
+        },
+        {
+          "id": "s2-stock",
+          "status": "done",
+          "deadline": 10
+        },
+        {
+          "id": "s2-cat",
+          "status": "done",
+          "deadline": 12
+        },
+        {
+          "id": "s2-stage",
+          "status": "done",
+          "deadline": 17
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "passed": true,
+      "all": true,
+      "completed": 6,
+      "total": 6,
+      "turn": 13,
+      "damage": 6,
+      "budget": 28,
+      "panic": 0,
+      "seed": 1,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s3-power",
+          "crew": [
+            "he",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "skill",
+          "actor": "he",
+          "target": "s3-power"
+        },
+        {
+          "turn": 1,
+          "action": "dispatch",
+          "job": "s3-pump",
+          "crew": [
+            "geng",
+            "da"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 5,
+          "action": "tick"
+        },
+        {
+          "turn": 5,
+          "action": "dispatch",
+          "job": "s3-bus",
+          "crew": [
+            "luo",
+            "dong"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 6,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "dispatch",
+          "job": "s3-bridge",
+          "crew": [
+            "geng",
+            "da"
+          ],
+          "mode": "chaos"
+        },
+        {
+          "turn": 7,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "dispatch",
+          "job": "s3-drone",
+          "crew": [
+            "he",
+            "tim"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 9,
+          "action": "tick"
+        },
+        {
+          "turn": 10,
+          "action": "tick"
+        },
+        {
+          "turn": 11,
+          "action": "tick"
+        },
+        {
+          "turn": 11,
+          "action": "dispatch",
+          "job": "s3-shelter",
+          "crew": [
+            "geng",
+            "dong"
+          ],
+          "mode": "chaos"
+        },
+        {
+          "turn": 12,
+          "action": "tick"
+        },
+        {
+          "turn": 13,
+          "action": "tick"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "s3-power",
+          "status": "done",
+          "deadline": 6
+        },
+        {
+          "id": "s3-pump",
+          "status": "done",
+          "deadline": 11
+        },
+        {
+          "id": "s3-bridge",
+          "status": "done",
+          "deadline": 13
+        },
+        {
+          "id": "s3-bus",
+          "status": "done",
+          "deadline": 15
+        },
+        {
+          "id": "s3-drone",
+          "status": "done",
+          "deadline": 18
+        },
+        {
+          "id": "s3-shelter",
+          "status": "done",
+          "deadline": 19
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "passed": true,
+      "all": true,
+      "completed": 7,
+      "total": 7,
+      "turn": 16,
+      "damage": 5,
+      "budget": 36,
+      "panic": 0,
+      "seed": 1,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s4-relay",
+          "crew": [
+            "luo",
+            "wang"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "dispatch",
+          "job": "s4-server",
+          "crew": [
+            "geng",
+            "dong"
+          ],
+          "mode": "chaos"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "dispatch",
+          "job": "s4-report",
+          "crew": [
+            "dong",
+            "tim"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 5,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "dispatch",
+          "job": "s4-antenna",
+          "crew": [
+            "geng",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 7,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "tick"
+        },
+        {
+          "turn": 9,
+          "action": "tick"
+        },
+        {
+          "turn": 9,
+          "action": "dispatch",
+          "job": "s4-crowd",
+          "crew": [
+            "dong",
+            "wang"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 10,
+          "action": "tick"
+        },
+        {
+          "turn": 10,
+          "action": "dispatch",
+          "job": "s4-backup",
+          "crew": [
+            "he",
+            "tim"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 11,
+          "action": "tick"
+        },
+        {
+          "turn": 11,
+          "action": "skill",
+          "actor": "he",
+          "target": "s4-backup"
+        },
+        {
+          "turn": 12,
+          "action": "tick"
+        },
+        {
+          "turn": 12,
+          "action": "dispatch",
+          "job": "s4-broadcast",
+          "crew": [
+            "geng",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 13,
+          "action": "tick"
+        },
+        {
+          "turn": 14,
+          "action": "tick"
+        },
+        {
+          "turn": 15,
+          "action": "tick"
+        },
+        {
+          "turn": 16,
+          "action": "tick"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "s4-relay",
+          "status": "done",
+          "deadline": 6
+        },
+        {
+          "id": "s4-server",
+          "status": "done",
+          "deadline": 10
+        },
+        {
+          "id": "s4-report",
+          "status": "done",
+          "deadline": 12
+        },
+        {
+          "id": "s4-antenna",
+          "status": "done",
+          "deadline": 16
+        },
+        {
+          "id": "s4-crowd",
+          "status": "done",
+          "deadline": 17
+        },
+        {
+          "id": "s4-backup",
+          "status": "done",
+          "deadline": 21
+        },
+        {
+          "id": "s4-broadcast",
+          "status": "done",
+          "deadline": 23
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "passed": true,
+      "all": true,
+      "completed": 8,
+      "total": 8,
+      "turn": 24,
+      "damage": 5,
+      "budget": 43,
+      "panic": 0,
+      "seed": 2,
+      "steps": [
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s5-power",
+          "crew": [
+            "he",
+            "tim"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 0,
+          "action": "dispatch",
+          "job": "s5-bridge",
+          "crew": [
+            "geng",
+            "dong"
+          ],
+          "mode": "chaos"
+        },
+        {
+          "turn": 1,
+          "action": "tick"
+        },
+        {
+          "turn": 1,
+          "action": "skill",
+          "actor": "he",
+          "target": "s5-power"
+        },
+        {
+          "turn": 2,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "tick"
+        },
+        {
+          "turn": 3,
+          "action": "dispatch",
+          "job": "s5-hotline",
+          "crew": [
+            "geng",
+            "dong"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 4,
+          "action": "tick"
+        },
+        {
+          "turn": 4,
+          "action": "dispatch",
+          "job": "s5-cooling",
+          "crew": [
+            "luo",
+            "wang"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 5,
+          "action": "tick"
+        },
+        {
+          "turn": 6,
+          "action": "tick"
+        },
+        {
+          "turn": 7,
+          "action": "tick"
+        },
+        {
+          "turn": 7,
+          "action": "dispatch",
+          "job": "s5-bypass",
+          "crew": [
+            "he",
+            "tim"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 8,
+          "action": "tick"
+        },
+        {
+          "turn": 8,
+          "action": "skill",
+          "actor": "he",
+          "target": "s5-bypass"
+        },
+        {
+          "turn": 9,
+          "action": "tick"
+        },
+        {
+          "turn": 10,
+          "action": "tick"
+        },
+        {
+          "turn": 10,
+          "action": "dispatch",
+          "job": "s5-evac",
+          "crew": [
+            "luo",
+            "dong"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 11,
+          "action": "tick"
+        },
+        {
+          "turn": 12,
+          "action": "tick"
+        },
+        {
+          "turn": 12,
+          "action": "dispatch",
+          "job": "s5-backup",
+          "crew": [
+            "geng",
+            "wang"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 13,
+          "action": "tick"
+        },
+        {
+          "turn": 14,
+          "action": "tick"
+        },
+        {
+          "turn": 15,
+          "action": "tick"
+        },
+        {
+          "turn": 16,
+          "action": "tick"
+        },
+        {
+          "turn": 17,
+          "action": "tick"
+        },
+        {
+          "turn": 18,
+          "action": "tick"
+        },
+        {
+          "turn": 19,
+          "action": "tick"
+        },
+        {
+          "turn": 20,
+          "action": "tick"
+        },
+        {
+          "turn": 20,
+          "action": "dispatch",
+          "job": "s5-core",
+          "crew": [
+            "he",
+            "luo"
+          ],
+          "mode": "safe"
+        },
+        {
+          "turn": 21,
+          "action": "tick"
+        },
+        {
+          "turn": 21,
+          "action": "skill",
+          "actor": "he",
+          "target": "s5-core"
+        },
+        {
+          "turn": 22,
+          "action": "tick"
+        },
+        {
+          "turn": 23,
+          "action": "tick"
+        },
+        {
+          "turn": 24,
+          "action": "tick"
+        },
+        {
+          "turn": 24,
+          "action": "buyTools"
+        },
+        {
+          "turn": 24,
+          "action": "skill",
+          "actor": "he",
+          "target": "s5-core"
+        }
+      ],
+      "finalJobs": [
+        {
+          "id": "s5-power",
+          "status": "done",
+          "deadline": 7
+        },
+        {
+          "id": "s5-bridge",
+          "status": "done",
+          "deadline": 8
+        },
+        {
+          "id": "s5-hotline",
+          "status": "done",
+          "deadline": 11
+        },
+        {
+          "id": "s5-cooling",
+          "status": "done",
+          "deadline": 14
+        },
+        {
+          "id": "s5-bypass",
+          "status": "done",
+          "deadline": 18
+        },
+        {
+          "id": "s5-evac",
+          "status": "done",
+          "deadline": 22
+        },
+        {
+          "id": "s5-backup",
+          "status": "done",
+          "deadline": 25
+        },
+        {
+          "id": "s5-core",
+          "status": "done",
+          "deadline": 30
+        }
+      ]
+    }
+  ],
+  "verified_on": "2026-11-14",
+  "final_validation": {
+    "status": "passed",
+    "checks": 344,
+    "levels": [
+      {
+        "level": 0,
+        "completed": 2,
+        "total": 2,
+        "turn": 4,
+        "damage": 0,
+        "panic": 0
+      },
+      {
+        "level": 1,
+        "completed": 4,
+        "total": 4,
+        "turn": 8,
+        "damage": 3,
+        "panic": 0
+      },
+      {
+        "level": 2,
+        "completed": 5,
+        "total": 5,
+        "turn": 12,
+        "damage": 0,
+        "panic": 0
+      },
+      {
+        "level": 3,
+        "completed": 6,
+        "total": 6,
+        "turn": 13,
+        "damage": 6,
+        "panic": 0
+      },
+      {
+        "level": 4,
+        "completed": 7,
+        "total": 7,
+        "turn": 16,
+        "damage": 5,
+        "panic": 0
+      },
+      {
+        "level": 5,
+        "completed": 8,
+        "total": 8,
+        "turn": 24,
+        "damage": 5,
+        "panic": 0
+      }
+    ]
+  },
+  "check_script": "work/campaign-v2/check-campaign.mjs",
+  "reviewed_sources": {
+    "outputs/abstract-dispatch-campaign/dist/campaign.mjs": "093d60afd2974bcb11ca3bebeb3f31ecfef73ae7359e5d51ad4f6204613032da",
+    "outputs/abstract-dispatch-campaign/dist/simulation.mjs": "8cf7e0665dcd6d295d8ea8413502a21e3f9d94022ab32e81f19c446f0991ec1d"
+  },
+  "resolved_findings": [
+    {
+      "id": "early-end-recovery",
+      "status": "fixed and regressed",
+      "witness": "t4 elevator failure; t4 crate dispatch; t7 all original jobs settled; Luo reopens; He arrives t8, accelerates; both jobs complete t9."
+    },
+    {
+      "id": "late-acceleration-dispatch",
+      "status": "fixed and regressed",
+      "result": "Risk dispatch now permits an otherwise-late technician to arrive and accelerate."
+    },
+    {
+      "id": "relaxed-clock-mismatch",
+      "status": "fixed and regressed",
+      "result": "All six relaxed stages get maxTurns+2; an optional final ticket dispatched t13 completes t15 instead of ending at t14."
+    },
+    {
+      "id": "rewind-message",
+      "status": "fixed and regressed",
+      "result": "Second rewind now clearly reports the per-stage limit."
+    },
+    {
+      "id": "boss-counter-skipping",
+      "status": "verified",
+      "result": "He crossing halfway triggers additional work/energy drain; a Wang shield genuinely blocks it."
+    }
+  ],
+  "remaining_blockers": [],
+  "caveats": [
+    "Pure-engine validation only; no browser, audio, animation or actual-device assertions.",
+    "Human difficulty still benefits from playtesting. Seeded solver has full foresight and pauses between actions."
+  ]
+}
